@@ -1,0 +1,25 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="All tests">
+	<listeners>
+		<listener class-name="com.framework.core.Listeners" />
+	</listeners>
+	
+	<test name="preserve-order All tests" preserve-order="true">
+	    <groups>
+	        <define name="other_tests">
+      			<include name="Gmail_Test"/>
+    		</define>
+			
+			<define name="all_tests">
+      			<include name="other_tests"/>
+    		</define>
+    			    
+        	<run>
+            	<include name="all_tests" />
+        	</run>
+    	</groups>
+    	<classes>
+       		<class name="com.framework.tests.some.Gmail_Test" />	
+    	</classes>
+	</test>
+</suite>

@@ -1,0 +1,6 @@
+environments:
+ 
+  gmail:
+   scheme: http
+   host: gmail.com
+   #port: 5050
